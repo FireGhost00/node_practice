@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/node": "^22.13.1",
+    "@types/yargs": "^17.0.33",
     "nodemon": "^3.1.9",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
@@ -46,11 +47,12 @@
     "undefsafe": "^2.0.5",
     "undici-types": "^6.20.0",
     "v8-compile-cache-lib": "^3.0.1",
+    "yargs": "^17.7.2",
     "yn": "^3.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node ./src/app.ts",
+    "dev": "ts-node ./src/app.ts -b 10",
     "dev:nodemon": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
